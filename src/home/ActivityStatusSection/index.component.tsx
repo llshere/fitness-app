@@ -3,6 +3,7 @@ import '../../global.css';
 import { makeStyles } from '@mui/styles';
 
 import { HeartRateChart } from './HeartRateChart';
+import { RoundChart } from './RoundChart';
 
 const useStyles = makeStyles({
   activityStatusSectionContainer: {
@@ -71,10 +72,19 @@ const useStyles = makeStyles({
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
   },
-  sleepGraphWrapper: {
+  graphWrapper: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    flexDirection: 'column',
+  },
+  circleBackground: {
+    height: '40px',
+    width: '40px',
+    marginTop: '-61px',
+    background:
+      '-webkit-linear-gradient(rgba(146, 163, 253, 1), rgba(157, 206, 255, 1))',
+    borderRadius: '50%',
   },
 });
 
@@ -96,13 +106,17 @@ export const ActivityStatusSection = () => {
           <div className={classes.activityStatusSectionCard}>
             <div className={classes.cardTitle}>Sleep</div>
             <div className={classes.cardSubtitle}>8h 20m</div>
-            <div className={classes.sleepGraphWrapper}>
+            <div className={classes.graphWrapper}>
               <img src="images\home\sleep_graph.svg" alt="Sleep Graph" />
             </div>
           </div>
           <div className={classes.activityStatusSectionCard}>
             <div className={classes.cardTitle}>Calories</div>
             <div className={classes.cardSubtitle}>760 kCal</div>
+            <div className={classes.graphWrapper}>
+              <RoundChart />
+              <div className={classes.circleBackground}></div>
+            </div>
           </div>
         </div>
       </div>
