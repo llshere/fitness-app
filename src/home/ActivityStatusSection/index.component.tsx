@@ -4,6 +4,8 @@ import { makeStyles } from '@mui/styles';
 
 import { HeartRateChart } from './HeartRateChart';
 import { RoundChart } from './RoundChart';
+import { WaterIntakeChart } from './WaterIntakeChart';
+import { WaterIntakeFlow } from './WaterIntakeFlow';
 
 const useStyles = makeStyles({
   activityStatusSectionContainer: {
@@ -19,6 +21,7 @@ const useStyles = makeStyles({
     marginTop: '16px',
   },
   activityStatusSectionLeftColumn: {
+    display: 'flex',
     width: '40vw',
     height: '315px',
     boxShadow: '0px 10px 40px rgba(29, 36, 42, 0.05)',
@@ -86,6 +89,17 @@ const useStyles = makeStyles({
       '-webkit-linear-gradient(rgba(146, 163, 253, 1), rgba(157, 206, 255, 1))',
     borderRadius: '50%',
   },
+  waterIntakeColumeWrapper: {},
+  waterIntakeFlowTitle: {
+    margin: '10px 8px 5px 20px',
+    width: 92,
+    fontFamily: 'Poppins',
+    fontStyle: 'normal',
+    fontWeight: 'normal',
+    fontSize: '10px',
+    lineHeight: '15px',
+    color: '#7B6F72',
+  },
 });
 
 export const ActivityStatusSection = () => {
@@ -101,7 +115,19 @@ export const ActivityStatusSection = () => {
         <HeartRateChart />
       </div>
       <div className={`${classes.chartsContainer} SectionContainer`}>
-        <div className={classes.activityStatusSectionLeftColumn}>1</div>
+        <div className={classes.activityStatusSectionLeftColumn}>
+          <WaterIntakeChart />
+          <div className={classes.waterIntakeColumeWrapper}>
+            <div className={`${classes.cardTitle} SectionContainer`}>
+              Water Intake
+            </div>
+            <div className={classes.cardSubtitle}>4 Liters</div>
+            <div className={classes.waterIntakeFlowTitle}>
+              Real time updates
+            </div>
+            <WaterIntakeFlow />
+          </div>
+        </div>
         <div className={classes.activityStatusSectionRightColumn}>
           <div className={classes.activityStatusSectionCard}>
             <div className={classes.cardTitle}>Sleep</div>

@@ -4,6 +4,7 @@ import { ActivityStatusSection } from './ActivityStatusSection';
 import { Banner } from './Banner';
 import { Header } from './Header';
 import { TodayTarget } from './TodayTarget';
+import { WorkoutProgressSection } from './WorkoutProgressSection';
 
 const useStyles = makeStyles({
   home: {
@@ -23,6 +24,7 @@ export const Home = () => {
       <Banner />
       <TodayTarget />
       <ActivityStatusSection />
+      <WorkoutProgressSection />
     </div>
   );
 };
