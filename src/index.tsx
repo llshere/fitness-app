@@ -10,6 +10,7 @@ WebFont.load({
 });
 
 document.body.style.margin = '0';
+document.body.style.overflowX = 'hidden';
 
 const rootElement = document.getElementById('root');
 render(<App />, rootElement);

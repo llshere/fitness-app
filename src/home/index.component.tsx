@@ -10,7 +10,7 @@ import { WorkoutProgressSection } from './WorkoutProgressSection';
 const useStyles = makeStyles({
   home: {
     display: 'flex',
-    alignItems: 'center',
+    flexDirection: 'row',
     justifyContent: 'center',
     flexWrap: 'wrap',
     maxWidth: '480px',

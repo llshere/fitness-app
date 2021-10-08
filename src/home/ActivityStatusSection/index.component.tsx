@@ -23,6 +23,7 @@ const useStyles = makeStyles({
   activityStatusSectionLeftColumn: {
     display: 'flex',
     width: '40vw',
+    maxWidth: '230px',
     height: '315px',
     boxShadow: '0px 10px 40px rgba(29, 36, 42, 0.05)',
     borderRadius: '20px',
@@ -32,10 +33,12 @@ const useStyles = makeStyles({
     flexDirection: 'column',
     justifyContent: 'space-between',
     width: '40vw',
+    maxWidth: '230px',
     height: '315px',
   },
   activityStatusSectionCard: {
     width: '40vw',
+    maxWidth: '230px',
     height: '150px',
     boxShadow: '0px 10px 40px rgba(29, 22, 23, 0.07)',
     borderRadius: '20px',
